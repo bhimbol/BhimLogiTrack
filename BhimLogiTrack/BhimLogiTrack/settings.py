@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-cjvgcl4grtwj&fb&&k@v^w(q22nlu=e^&8euj3e6*_h9x#wgri
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://bhimlogitrack.onrender.com',
+    '127.0.0.1',
+    'bhimlogitrack.onrender.com',
 ]
 
 
