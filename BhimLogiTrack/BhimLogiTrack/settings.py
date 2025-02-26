@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-cjvgcl4grtwj&fb&&k@v^w(q22nlu=e^&8euj3e6*_h9x#wgri
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://bhimlogitrack.onrender.com',
+]
 
 
 # Application definition
