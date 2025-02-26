@@ -3,9 +3,11 @@ certifi==2025.1.31
 charset-normalizer==3.4.1
 Django==5.1.6
 et_xmlfile==2.0.0
+gunicorn==23.0.0
 idna==3.10
 numpy==2.2.3
 openpyxl==3.1.5
+packaging==24.2
 panda==0.3.1
 pandas==2.2.3
 python-dateutil==2.9.0.post0
