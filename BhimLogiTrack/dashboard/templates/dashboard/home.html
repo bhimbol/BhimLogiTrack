@@ -4,6 +4,13 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to My Django App! DASHBOARD</h1>
+    <h1>DASHBOARD</h1>
+    <form method="post" action="{% url 'upload_file' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="excel_file" accept=".xls,.xlsx" required>
+        <br><br>
+        <button type="submit">Upload</button>
+    </form>
 </body>
 </html>
+

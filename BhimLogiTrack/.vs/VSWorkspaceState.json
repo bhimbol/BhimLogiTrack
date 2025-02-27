@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\BhimLogiTrack",
-    "\\product_manager"
+    "\\dashboard",
+    "\\dashboard\\templates"
   ],
-  "SelectedNode": "\\BhimLogiTrack\\urls.py",
+  "SelectedNode": "\\dashboard\\views.py",
   "PreviewInSolutionExplorer": false
 }
