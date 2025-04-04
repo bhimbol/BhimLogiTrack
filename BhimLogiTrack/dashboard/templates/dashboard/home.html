@@ -5,12 +5,49 @@
 </head>
 <body>
     <h1>DASHBOARD</h1>
-    <form method="post" action="{% url 'upload_file' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="file" name="excel_file" accept=".xls,.xlsx" required>
-        <br><br>
-        <button type="submit">Upload</button>
-    </form>
+	<form method="post" action="{% url 'upload_file' %}" enctype="multipart/form-data">
+	  {% csrf_token %}
+	  <input type="file" name="excel_files" multiple accept=".xls,.xlsx">
+	  <input type="text" name="tag" placeholder="Enter tag (optional)">
+	  <button type="submit">Upload Files</button>
+	</form>
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+        <p style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+            {{ message }}
+        </p>
+        {% endfor %}
+    </div>
+    {% endif %}
+	
+	{% if total_amount %}
+		<h3>Total Invoice Amount: {{ total_amount }}</h3>
+	{% endif %}
+
+	{% if invoice_string %}
+	  <h3>Invoice Numbers:</h3>
+	  <textarea id="invoiceString" rows="4" cols="50">{{ invoice_string }}</textarea>
+	  <br>
+	  <button onclick="copyToClipboard()">Copy Invoice Numbers to Clipboard</button>
+	{% endif %}
+
+	<script>
+	  function copyToClipboard() {
+		/* Get the text field */
+		var copyText = document.getElementById("invoiceString");
+
+		/* Select the text field */
+		copyText.select();
+		copyText.setSelectionRange(0, 99999); // For mobile devices
+
+		/* Copy the text inside the text field */
+		document.execCommand("copy");
+
+		/* Alert the copied text */
+		alert("Copied to clipboard: " + copyText.value);
+	  }
+	</script>
+
 </body>
 </html>
-

@@ -3,8 +3,9 @@
     "",
     "\\BhimLogiTrack",
     "\\dashboard",
-    "\\dashboard\\templates"
+    "\\dashboard\\templates",
+    "\\dashboard\\templates\\dashboard"
   ],
-  "SelectedNode": "\\dashboard\\views.py",
+  "SelectedNode": "\\dashboard\\models.py",
   "PreviewInSolutionExplorer": false
 }
